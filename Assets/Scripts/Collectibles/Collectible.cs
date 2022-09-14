@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public GameObject collectible;
+    public PlayerHP playerHP;
+    
     public static event Action OnCollected;
     void Update()
     {
@@ -14,10 +15,35 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && this.CompareTag("Health"))
         {
             OnCollected?.Invoke();
-            Destroy(collectible);
+            if (playerHP.playerHP < 100)
+            {
+            playerHP.playerHP += 20;
+            Destroy(gameObject);
+            }
+            if (playerHP.playerHP > 100)
+            {
+                playerHP.playerHP = 100;
+            }         
+        }
+
+        if (other.CompareTag("Player") && this.CompareTag("Armor"))
+        {
+            OnCollected?.Invoke();
+            if (playerHP.playerArmor < 50)
+            {
+                playerHP.playerArmor += 5;
+                Destroy(gameObject);
+
+            }
+            if (playerHP.playerArmor > 50)
+            {
+                playerHP.playerArmor = 50;
+            }
+
+
         }
     }
 }
