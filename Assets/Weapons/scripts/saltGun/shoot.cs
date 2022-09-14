@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
-    enemyHealth enemyHP;
-
     public ParticleSystem particles;
 
     void OnParticleCollision(GameObject other)
@@ -14,12 +12,17 @@ public class shoot : MonoBehaviour
 
         particles.Stop();
 
-        if (other.gameObject.layer == 9)
+        if (other.gameObject.layer == 6)
         {
+            Debug.Log("Hit something");
+            Debug.Log("Hit enemy!");
             switch (other.gameObject.tag)
             {
                 case "hytty":
-                    enemyHP = other.gameObject.GetComponent<enemyHealth>();
+                    Debug.Log("Hit hytty!");
+
+                    hyttyHealth enemyHP;
+                    enemyHP = other.gameObject.GetComponent<hyttyHealth>();
 
                     enemyHP.health--;
                     break;
