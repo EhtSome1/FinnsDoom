@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public GameObject collectible;
+    public GameObject player;
+    PlayerHP playerhp;
     public static event Action OnCollected;
     void Update()
     {
@@ -17,7 +18,7 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OnCollected?.Invoke();
-            Destroy(collectible);
+            Destroy(gameObject);
         }
     }
 }
