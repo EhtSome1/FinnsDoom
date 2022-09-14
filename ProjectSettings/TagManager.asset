@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hytty
   - Health
+  - Armor
   layers:
   - Default
   - TransparentFX
