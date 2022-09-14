@@ -20,7 +20,7 @@ public class Attack : MonoBehaviour
 
             if (playerHP.playerArmor > 0)
             {
-                playerHP.playerArmor -= 5;
+                playerHP.playerArmor -= 30;
             }
             if (playerHP.playerArmor < 0)
             {
@@ -30,7 +30,7 @@ public class Attack : MonoBehaviour
             }
             else if (playerHP.playerArmor <= 0)
             {
-                playerHP.playerHP -= 5;
+                playerHP.playerHP -= 30;
             }
 
             Invoke("enableAttack", 1f);

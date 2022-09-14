@@ -10,8 +10,6 @@ public class shoot : MonoBehaviour
     {
         Debug.Log("Hit something!");
 
-        particles.Stop();
-
         if (other.gameObject.layer == 6)
         {
             Debug.Log("Hit something");
