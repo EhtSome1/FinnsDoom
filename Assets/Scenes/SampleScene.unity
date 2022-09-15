@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ad9d080440d31da4ab20a2f06c459184, type: 2}
 --- !u!1 &32325226
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 32325229}
   - component: {fileID: 32325228}
   - component: {fileID: 32325227}
-  m_Layer: 4
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +400,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+--- !u!1 &605293661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1871750865147057684, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+  m_PrefabInstance: {fileID: 2589666957343694994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &605293663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605293661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f13469739c8b3c418bd1ff59d21763e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1728463236}
+  player: {fileID: 645694989}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 100
+  sightRange: 20
+  attackRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1001 &615628636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,8 +509,8 @@ GameObject:
   - component: {fileID: 645694990}
   - component: {fileID: 645694993}
   - component: {fileID: 645694992}
-  m_Layer: 0
-  m_Name: player
+  m_Layer: 7
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +651,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 8
 --- !u!114 &645694992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 705408135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1073,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1204,7 +1235,7 @@ GameObject:
   - component: {fileID: 1113072691}
   - component: {fileID: 1113072690}
   - component: {fileID: 1113072689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pelletParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6080,6 +6111,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193dcf3f257fd654480c2ac691b066f0, type: 3}
+--- !u!1 &1728463230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2589666959022856069, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+  m_PrefabInstance: {fileID: 2589666957343694994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1728463235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728463230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f13469739c8b3c418bd1ff59d21763e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1728463236}
+  player: {fileID: 645694989}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 100
+  sightRange: 20
+  attackRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
+--- !u!195 &1728463236
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728463230}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 11
+  m_Acceleration: 12
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1785593940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6191,7 +6275,7 @@ GameObject:
   - component: {fileID: 19279709750918945}
   - component: {fileID: 5906078275305903222}
   - component: {fileID: 4776385005826339958}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6388,7 +6472,7 @@ GameObject:
   - component: {fileID: 2191369678084980931}
   - component: {fileID: 4147173508360811529}
   - component: {fileID: 4147173508360811530}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: double_barrel_shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6406,17 +6490,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Hytty
       objectReference: {fileID: 0}
+    - target: {fileID: 1871750865147057684, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871750865147057684, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+      propertyPath: m_TagString
+      value: hytty
+      objectReference: {fileID: 0}
     - target: {fileID: 2589666958977360161, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 645694984}
+    - target: {fileID: 2589666959022856075, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589666959022856075, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4480389474473792573, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4480389474473792573, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.98
+      value: 21.31
       objectReference: {fileID: 0}
     - target: {fileID: 4480389474473792573, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6424,7 +6524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480389474473792573, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.27
+      value: 89.25
       objectReference: {fileID: 0}
     - target: {fileID: 4480389474473792573, guid: 516b654eaff3f4942a23dbd4b8631833, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6485,7 +6585,7 @@ GameObject:
   - component: {fileID: 1709223267658103804}
   - component: {fileID: 3484825999102119734}
   - component: {fileID: 3484825999102119732}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SuolaAse (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6730,7 +6830,7 @@ GameObject:
   - component: {fileID: 5052158953488767179}
   - component: {fileID: 4761892655783902992}
   - component: {fileID: 4314523937855746573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: slugRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6798,7 +6898,7 @@ GameObject:
   - component: {fileID: 1116650531798678946}
   - component: {fileID: 6298663107251638897}
   - component: {fileID: 955378381465721306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: slugLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6846,7 +6946,7 @@ GameObject:
   - component: {fileID: 3541206497489805494}
   - component: {fileID: 370103735759596617}
   - component: {fileID: 4472701790949908409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6865,7 +6965,7 @@ GameObject:
   - component: {fileID: 5189960202657335403}
   - component: {fileID: 5189960202657335402}
   - component: {fileID: 5189960202657335400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: saltParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11691,7 +11791,7 @@ GameObject:
   - component: {fileID: 6636475348003732154}
   - component: {fileID: 6317467505555164350}
   - component: {fileID: 1555548007833162750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11805,7 +11905,7 @@ GameObject:
   - component: {fileID: 7586385741765120907}
   - component: {fileID: 1034503353193069666}
   - component: {fileID: 5838961124101813375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11882,7 +11982,7 @@ GameObject:
   - component: {fileID: 543358635007493981}
   - component: {fileID: 6402155672030531392}
   - component: {fileID: 6960717012997318837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11926,7 +12026,7 @@ GameObject:
   - component: {fileID: 5002496257672241267}
   - component: {fileID: 6696088594293206192}
   - component: {fileID: 8791347242822784125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11945,7 +12045,7 @@ GameObject:
   - component: {fileID: 782792956348737586}
   - component: {fileID: 5486903528417636771}
   - component: {fileID: 2249127728852617756}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
