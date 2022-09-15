@@ -9,7 +9,7 @@ public class switchWeapon : MonoBehaviour
 
     public Animations weaponAnimations;
 
-    bool canShangeWeapon = true;
+    public bool canShangeWeapon = true;
 
     // Start is called before the first frame update
     void Start()

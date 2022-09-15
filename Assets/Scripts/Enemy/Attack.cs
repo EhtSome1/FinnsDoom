@@ -10,6 +10,8 @@ public class Attack : MonoBehaviour
 
     int overDamage;
 
+    public int attackDamage = 30;
+
     bool canAttack = true;
 
     void OnTriggerStay(Collider other)
@@ -20,17 +22,19 @@ public class Attack : MonoBehaviour
 
             if (playerHP.playerArmor > 0)
             {
-                playerHP.playerArmor -= 30;
+                playerHP.playerArmor -= attackDamage;
             }
             if (playerHP.playerArmor < 0)
             {
                 overDamage = -playerHP.playerArmor;
 
                 playerHP.playerHP -= overDamage;
+
+                playerHP.playerArmor = 0;
             }
             else if (playerHP.playerArmor <= 0)
             {
-                playerHP.playerHP -= 30;
+                playerHP.playerHP -= attackDamage;
             }
 
             Invoke("enableAttack", 1f);

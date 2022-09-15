@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
+    public Animations animations;
+
     public ParticleSystem particles;
 
     void OnParticleCollision(GameObject other)
@@ -18,11 +20,14 @@ public class shoot : MonoBehaviour
             {
                 case "hytty":
                     Debug.Log("Hit hytty!");
+                    if (animations.currentWeapon == "saltgun")
+                    {
+                        hyttyHealth enemyHP;
+                        enemyHP = other.gameObject.GetComponent<hyttyHealth>();
 
-                    hyttyHealth enemyHP;
-                    enemyHP = other.gameObject.GetComponent<hyttyHealth>();
+                        enemyHP.health--;
+                    }
 
-                    enemyHP.health--;
                     break;
             }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     public bool canReload = true;
+    public bool hasShot = false;
 
     public GameObject reloadHandle;
 
@@ -20,6 +21,8 @@ public class Animations : MonoBehaviour
 
     public int saltgunAmmo = 30;
     public int doubleBarrelAmmo = 30;
+
+    public switchWeapon Switch;
 
     // Start is called before the first frame update
     void Start()
@@ -39,33 +42,42 @@ public class Animations : MonoBehaviour
 
                     Invoke("reload", 0.07f);
                     Invoke("canShoot", 1.7f);
+                    Invoke("canChange", 1.7f);
 
                     saltgunAmmo--;
                 }
                 break;
             case "doubleBarrel":
-                if (Input.GetKeyDown(KeyCode.Mouse0) && canReload && doubleBarrelAmmo > 0)
+                if (Input.GetKeyDown(KeyCode.Mouse0) && canReload && doubleBarrelAmmo > 0 && hasShot == false)
                 {
                     pelletParticle.Play();
 
                     doubleBarrelAmmo--;
 
-                    if (Input.GetKeyDown(KeyCode.Mouse0) && canReload && doubleBarrelAmmo > 0)
-                    {
-                        pelletParticle.Play();
+                    hasShot = true;
 
-                        Invoke("reload", 0.07f);
-                        Invoke("canShoot", 3.4f);
-
-                        doubleBarrelAmmo--;
-                    }
+                    canReload = false;
+                    Invoke("canShoot2", 0.06f);
                 }
+                if (Input.GetKeyDown(KeyCode.Mouse0) && hasShot && canReload && doubleBarrelAmmo > 0)
+                {
+                    pelletParticle.Play();
+
+                    Invoke("reload", 0.07f);
+                    Invoke("canShoot", 3.4f);
+                    Invoke("canChange", 3.4f);
+
+                    doubleBarrelAmmo--;
+                }
+
                 break;
         }
     }
 
     void reload()
     {
+        Switch.canShangeWeapon = false; 
+
         canReload = false;
         Debug.Log("canReload = false");
 
@@ -101,5 +113,17 @@ public class Animations : MonoBehaviour
     {
         Debug.Log("canRealode = true");
         canReload = true;
+
+        hasShot = false;
+    }
+
+    void canShoot2()
+    {
+        canReload = true;
+    }
+
+    void canChange()
+    {
+        Switch.canShangeWeapon = true;
     }
 }
