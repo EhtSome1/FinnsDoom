@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class hyttyHealth : MonoBehaviour
 {
-    public int health = 20;
+    public GameObject hytty;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int health = 20;
 
     // Update is called once per frame
     void Update()
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Destroy(hytty);
         }
     }
 }
