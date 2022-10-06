@@ -8,6 +8,8 @@ TagManager:
   - Health
   - Armor
   - Ground
+  - Salt_Ammo
+  - Double_Barrel_Ammo
   layers:
   - Default
   - TransparentFX

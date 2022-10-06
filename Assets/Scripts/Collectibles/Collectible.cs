@@ -6,7 +6,8 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     public PlayerHP playerHP;
-    
+    public Animations animations;
+
     public static event Action OnCollected;
     void Update()
     {
@@ -20,13 +21,13 @@ public class Collectible : MonoBehaviour
             OnCollected?.Invoke();
             if (playerHP.playerHP < 100)
             {
-            playerHP.playerHP += 20;
-            Destroy(gameObject);
+                playerHP.playerHP += 20;
+                Destroy(gameObject);
             }
             if (playerHP.playerHP > 100)
             {
                 playerHP.playerHP = 100;
-            }         
+            }
         }
 
         if (other.CompareTag("Player") && this.CompareTag("Armor"))
@@ -45,5 +46,33 @@ public class Collectible : MonoBehaviour
 
 
         }
-    }
-}
+        if (other.CompareTag("Player") && this.CompareTag("Salt_Ammo"))
+        {
+            OnCollected?.Invoke();
+            if (animations.saltgunAmmo < 30)
+            {
+                animations.saltgunAmmo += 5;
+                Destroy(gameObject);
+            }
+            if (animations.saltgunAmmo > 30)
+            {
+                animations.saltgunAmmo = 30;
+            }
+        }
+                if (other.CompareTag("Player") && this.CompareTag("Double_Barrel_Ammo"))
+                {
+                    OnCollected?.Invoke();
+                    if (animations.doubleBarrelAmmo < 30)
+                    {
+                        animations.doubleBarrelAmmo += 5;
+                        Destroy(gameObject);
+                    }
+                    if (animations.doubleBarrelAmmo > 30)
+                    {
+                        animations.doubleBarrelAmmo = 30;
+                    }
+                }
+            }
+        }
+    
+
