@@ -10,10 +10,14 @@ public class pickUpKey : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "player")
+        Debug.Log(other.gameObject.tag);
+
+        if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKey(KeyCode.E))
             {
+                Debug.Log("Picked up the key");
+
                 Destroy(avain);
 
                 Door.hasKey = true;
