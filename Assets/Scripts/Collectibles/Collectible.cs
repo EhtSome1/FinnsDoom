@@ -11,7 +11,7 @@ public class Collectible : MonoBehaviour
     public static event Action OnCollected;
     void Update()
     {
-        transform.Rotate(0f, 0.3f, 0f, Space.Self);
+        transform.Rotate(0f, 0f, 0.3f, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)
