@@ -7,6 +7,9 @@ TagManager:
   - hytty
   - Health
   - Armor
+  - Ground
+  - Salt_Ammo
+  - Double_Barrel_Ammo
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Water
   - UI
   - enemy
-  - 
+  - Player
   - 
   - 
   - 
