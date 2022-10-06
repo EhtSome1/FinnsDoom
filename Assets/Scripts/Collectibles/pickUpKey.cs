@@ -14,7 +14,7 @@ public class pickUpKey : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.F))
             {
                 Debug.Log("Picked up the key");
 

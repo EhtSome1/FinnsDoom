@@ -10,7 +10,7 @@ public class canOpenDoor : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (hasKey && Input.GetKeyDown(KeyCode.E))
+            if (hasKey && Input.GetKeyDown(KeyCode.F))
             {
                 Debug.Log("Door opened");
             }

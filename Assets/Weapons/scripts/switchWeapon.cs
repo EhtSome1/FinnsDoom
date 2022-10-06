@@ -10,6 +10,8 @@ public class switchWeapon : MonoBehaviour
     public Animations weaponAnimations;
 
     public bool canShangeWeapon = true;
+    public bool hasSaltgun = false;
+    public bool hasShotgun = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class switchWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canShangeWeapon && weaponAnimations.currentWeapon == "saltgun" && Input.GetKey(KeyCode.E))
+        if (canShangeWeapon && weaponAnimations.currentWeapon == "saltgun" && Input.GetKey(KeyCode.E) && hasSaltgun && hasShotgun)
         {
             saltGun.SetActive(false);
             doubleBarrel.SetActive(true);
@@ -33,7 +35,7 @@ public class switchWeapon : MonoBehaviour
 
         }
 
-        if (canShangeWeapon && weaponAnimations.currentWeapon == "doubleBarrel" && Input.GetKey(KeyCode.Q))
+        if (canShangeWeapon && weaponAnimations.currentWeapon == "doubleBarrel" && Input.GetKey(KeyCode.Q) && hasSaltgun && hasShotgun)
         {
             saltGun.SetActive(true);
             doubleBarrel.SetActive(false);
