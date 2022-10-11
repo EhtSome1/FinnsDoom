@@ -124,6 +124,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: furTree_lod1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73006a33b193bc94d819ec8b25b1c42e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73006a33b193bc94d819ec8b25b1c42e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73006a33b193bc94d819ec8b25b1c42e, type: 3}
 --- !u!23 &5097952856269658141 stripped
@@ -155,6 +163,22 @@ CapsuleCollider:
   m_Height: 1.1591405
   m_Direction: 1
   m_Center: {x: 0.03, y: 0.57957023, z: -0.016}
+--- !u!208 &1485380808574591048
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755238280478570952}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.06, y: 0.58000004, z: 0.05}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.03, y: 0.58000004, z: -0.017}
+  m_TimeToStationary: 0.5
 --- !u!1001 &8059014341548039145
 PrefabInstance:
   m_ObjectHideFlags: 0
