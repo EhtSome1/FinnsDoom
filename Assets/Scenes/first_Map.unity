@@ -108,13 +108,13 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 0
+    agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.16666667
+    manualCellSize: 1
+    cellSize: 0.019
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 82969a599bd3e98419cb6c51d3c11427, type: 2}
 --- !u!1 &325994473
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &325994474
 Transform:
   m_ObjectHideFlags: 0
@@ -520,11 +520,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4719498058280166341, guid: 146268ec077cea84bb107c91455d2901, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: -51
       objectReference: {fileID: 0}
     - target: {fileID: 4719498058280166341, guid: 146268ec077cea84bb107c91455d2901, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 209
+      value: 184.4
       objectReference: {fileID: 0}
     - target: {fileID: 4719498058280166341, guid: 146268ec077cea84bb107c91455d2901, type: 3}
       propertyPath: m_LocalRotation.w
@@ -584,7 +584,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!154 &1850353638
 TerrainCollider:
@@ -699,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111325336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -324.62, y: 1.87, z: 63.62}
+  m_LocalPosition: {x: -328.02, y: 1.87, z: 53.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -891,13 +891,15 @@ GameObject:
   - component: {fileID: 3469287837785185050}
   - component: {fileID: 1711813854798032848}
   - component: {fileID: 3469287837785185051}
+  - component: {fileID: 3469287837785185053}
+  - component: {fileID: 3469287837785185052}
   m_Layer: 0
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &919132149522019889
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,7 +6730,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b00c9313edd7f4eab64b9dc5a3554f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hytty: {fileID: 634340260}
+  maxHytty: 15
+  currentHytty: 0
+  spawnedPrefab: {fileID: 634340260}
+  spawnArea: {fileID: 3469287837785185052}
+  spawnDelayS: 5
+--- !u!65 &3469287837785185052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147854052869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -0.05, y: 0.06, z: -0.01}
+  m_Center: {x: 0.000028944574, y: -0.000010009388, z: 0.009}
+--- !u!135 &3469287837785185053
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147854052869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.012329631
+  m_Center: {x: 0.000028944574, y: -0.000010009388, z: 0}
 --- !u!1 &3575049055799018160
 GameObject:
   m_ObjectHideFlags: 0
