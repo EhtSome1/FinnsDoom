@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
-    int maxHytty = 15;
+    /*int maxHytty = 15;
     int currentHytty = 0;
 
 
@@ -26,5 +26,44 @@ public class spawner : MonoBehaviour
 
             currentHytty++;
         }
+    }*/
+    public int maxHytty = 15;
+    public int currentHytty = 0;
+
+    public GameObject spawnedPrefab;
+    public BoxCollider spawnArea;
+    Vector2 maxSpawnPos;
+
+    float lastSpawnTimeS = -1;
+    public float spawnDelayS = 5;
+
+    // Use this for initialization
+    void Start()
+    {
+        spawnArea = GetComponent<BoxCollider>();
+        spawnArea.enabled = false;
+        maxSpawnPos = new Vector2(spawnArea.size.x / 2, spawnArea.size.y / 2);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (currentHytty != maxHytty)
+        {
+            if (lastSpawnTimeS < 0)
+            {
+                lastSpawnTimeS = Time.time;
+                GameObject spawned = Instantiate(spawnedPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+                spawned.transform.parent = transform;
+                Vector3 pos = new Vector3(Random.Range(-maxSpawnPos.x, maxSpawnPos.x), Random.Range(-maxSpawnPos.y, maxSpawnPos.y), 0);
+                spawned.transform.localPosition = pos;
+                currentHytty++;
+            }
+            else if (lastSpawnTimeS >= 0 && Time.time - lastSpawnTimeS > spawnDelayS)
+            {
+                lastSpawnTimeS = -1;
+            }
+        }
+
     }
 }
