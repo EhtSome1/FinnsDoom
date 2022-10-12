@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class canOpenDoor : MonoBehaviour
 {
     public Animator dooranim;
-
+    public Object sceneToLoad;
     public bool hasKey;
 
     void OnTriggerStay(Collider other)
@@ -14,6 +16,7 @@ public class canOpenDoor : MonoBehaviour
         {
             if (hasKey && Input.GetKeyDown(KeyCode.F))
             {
+                SceneManager.LoadScene(sceneToLoad.name);
                 dooranim.SetBool("doorOpen", true);
                 Debug.Log("Door opened");
             }
