@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Salt_Ammo
   - Double_Barrel_Ammo
+  - WorldSwitch
   layers:
   - Default
   - TransparentFX
