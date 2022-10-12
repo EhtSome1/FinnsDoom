@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class canOpenDoor : MonoBehaviour
 {
+    public Animator dooranim;
+
     public bool hasKey;
 
     void OnTriggerStay(Collider other)
@@ -12,6 +14,7 @@ public class canOpenDoor : MonoBehaviour
         {
             if (hasKey && Input.GetKeyDown(KeyCode.F))
             {
+                dooranim.SetBool("doorOpen", true);
                 Debug.Log("Door opened");
             }
         }
