@@ -26,6 +26,16 @@ public class EnemyAI : MonoBehaviour
         //jos pelaaja on näkyvissä // ChasePlayer()
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
     }
+    //Satunnainen pelaajan etsiminen
+    private void SearchWalkPoint()
+    {
+        float randomZ = Random.Range(-walkPointRange, walkPointRange);
+        float randomX = Random.Range(-walkPointRange, walkPointRange);
+        //Satunnaisen muuttujan(saapumispisteen) luonti = (walkPoint)
+        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, Ground))
+            walkPointset = true;
+    }
     //Pelaajan etsiminen
     private void Patroling()
     {
@@ -40,16 +50,6 @@ public class EnemyAI : MonoBehaviour
     {
         Debug.Log("löyty");
         agent.SetDestination(player.position);
-    }
-    //Satunnainen pelaajan etsiminen
-    private void SearchWalkPoint()
-    {
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
-        //Satunnaisen muuttujan(saapumispisteen) luonti = (walkPoint)
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, Ground))
-            walkPointset = true;
     }
     private void OnDrawGizmosSelected()
     {
