@@ -16,9 +16,9 @@ public class canOpenDoor : MonoBehaviour
         {
             if (hasKey && Input.GetKeyDown(KeyCode.F))
             {
-                SceneManager.LoadScene(sceneToLoad.name);
                 dooranim.SetBool("doorOpen", true);
                 Debug.Log("Door opened");
+                SceneManager.LoadScene(sceneToLoad.name);
             }
         }
     }
