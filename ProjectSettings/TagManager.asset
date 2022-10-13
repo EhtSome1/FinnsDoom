@@ -11,6 +11,7 @@ TagManager:
   - Salt_Ammo
   - Double_Barrel_Ammo
   - WorldSwitch
+  - murkku
   layers:
   - Default
   - TransparentFX

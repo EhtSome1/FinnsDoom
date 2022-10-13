@@ -27,7 +27,17 @@ public class shoot : MonoBehaviour
 
                         enemyHP.health--;
                     }
+                    break;
 
+                case "murkku":
+                    Debug.Log("Hit murkku");
+                    if (animations.currentWeapon == "doubleBarrel")
+                    {
+                        enemyHealth enemyHP;
+                        enemyHP = other.gameObject.GetComponent<enemyHealth>();
+
+                        enemyHP.health--;
+                    }
                     break;
             }
 
