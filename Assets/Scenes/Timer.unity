@@ -678,13 +678,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535503901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c967a6141b01574da72ea5573feeffb, type: 3}
+  m_Script: {fileID: 11500000, guid: 85503ba0b35f3b44da3585cd6479b2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 273629481}
-  startTime: 0
   timer: 0
-  switchedScene: 0
 --- !u!4 &1535503903
 Transform:
   m_ObjectHideFlags: 0
@@ -860,7 +858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48981a72d7a82b4998b715114e1d62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
   controller: {fileID: 1729608210}
   speed: 12
   gravity: -9.81
