@@ -6,7 +6,7 @@ public class hyttyHealth : MonoBehaviour
 {
     public GameObject hytty;
 
-    public int health = 20;
+    public int health = 40;
 
     // Update is called once per frame
     void Update()
