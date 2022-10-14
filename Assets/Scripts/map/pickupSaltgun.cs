@@ -5,13 +5,16 @@ using UnityEngine;
 public class pickupSaltgun : MonoBehaviour
 {
     public switchWeapon Switch;
+    public Animations animations;
 
-     void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
+                animations.currentWeapon = "saltgun";
+
                 Destroy(gameObject);
 
                 Debug.Log("picked up saltgun");
@@ -21,17 +24,5 @@ public class pickupSaltgun : MonoBehaviour
                 Switch.saltGun.SetActive(true);
             }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

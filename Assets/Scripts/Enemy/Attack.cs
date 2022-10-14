@@ -10,7 +10,7 @@ public class Attack : MonoBehaviour
 
     int overDamage;
 
-    public int attackDamage = 30;
+    public int attackDamage = 50;
 
     bool canAttack = true;
 
