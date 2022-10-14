@@ -27,7 +27,6 @@ public class Animations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentWeapon = "saltgun";
     }
 
     // Update is called once per frame

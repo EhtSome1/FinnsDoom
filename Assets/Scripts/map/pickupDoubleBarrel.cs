@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickupSaltgun : MonoBehaviour
+public class pickupDoubleBarrel : MonoBehaviour
 {
     public switchWeapon Switch;
     public Animations animations;
@@ -13,15 +13,15 @@ public class pickupSaltgun : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                animations.currentWeapon = "saltgun";
+                animations.currentWeapon = "doubleBarrel";
 
                 Destroy(gameObject);
 
-                Debug.Log("picked up saltgun");
+                Debug.Log("picked up Double barrel");
 
-                Switch.hasSaltgun = true;
+                Switch.hasShotgun = true;
 
-                Switch.saltGun.SetActive(true);
+                Switch.doubleBarrel.SetActive(true);
             }
         }
     }
