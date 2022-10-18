@@ -48,7 +48,6 @@ public class EnemyAI : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        Debug.Log("löyty");
         agent.SetDestination(player.position);
     }
     private void OnDrawGizmosSelected()
