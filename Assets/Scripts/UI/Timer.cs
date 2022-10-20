@@ -9,13 +9,9 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText;
     private float startTime;
     public float timer = 0;
-    bool switchedScene = false;
-
-
+ 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-
         startTime = Time.time;
     }
 
@@ -27,8 +23,6 @@ public class Timer : MonoBehaviour
         string seconds = (t % 60).ToString("f2");
 
         timerText.text = minutes + ":" + seconds;
-        TimingManager.myTimer += Time.deltaTime;
-
-        Debug.Log(TimingManager.myTimer);
+        TimingManager.myTimer += Time.deltaTime;     
     }
 }
