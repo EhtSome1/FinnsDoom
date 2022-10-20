@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class pickupDoubleBarrel : MonoBehaviour
 {
-    public switchWeapon Switch;
-    public Animations animations;
+    GameObject player;
+
+    switchWeapon Switch;
+    Animations animations;
+
+    void Start()
+    {
+        player = GameObject.Find("Player");
+
+        Switch = player.gameObject.GetComponent<switchWeapon>();
+    }
 
     void OnTriggerStay(Collider other)
     {

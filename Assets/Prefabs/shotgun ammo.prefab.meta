@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/shotgun ammo.prefab.meta
 guid: 9ba7851ebb6e9b14793ea9755835f7f8
+========
+guid: 31b7de6d955fb3349926d9193a0dc5c2
+>>>>>>>> maps:Assets/Lighting/Map_light.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
