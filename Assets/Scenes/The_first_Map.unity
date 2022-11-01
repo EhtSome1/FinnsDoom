@@ -8006,6 +8006,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHP: 100
   playerArmor: 50
+  sceneToLoad: {fileID: 102900000, guid: 577328e83686a634f9235cc4ed18faea, type: 3}
+  timer: {fileID: 1171985597}
   move: {fileID: 1927904118046403164}
 --- !u!1 &1927904118046403163
 GameObject:
