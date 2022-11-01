@@ -27,7 +27,7 @@ public class PlayerHP : MonoBehaviour
             Destroy(timer.gameObject);
             move.canMove = false;
             SceneManager.LoadScene(sceneToLoad.name);
-
+            Cursor.lockState = CursorLockMode.Confined;
 
 }
     }
