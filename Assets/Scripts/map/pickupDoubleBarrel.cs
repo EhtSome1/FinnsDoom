@@ -14,6 +14,7 @@ public class pickupDoubleBarrel : MonoBehaviour
         player = GameObject.Find("Player");
 
         Switch = player.gameObject.GetComponent<switchWeapon>();
+        animations = player.gameObject.GetComponent<Animations>();
     }
 
     void OnTriggerStay(Collider other)
@@ -30,6 +31,7 @@ public class pickupDoubleBarrel : MonoBehaviour
 
                 Switch.hasShotgun = true;
 
+                Switch.saltGun.SetActive(false);
                 Switch.doubleBarrel.SetActive(true);
             }
         }

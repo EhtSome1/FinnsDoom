@@ -5,6 +5,8 @@ using UnityEngine;
 public class deathcounter : MonoBehaviour
 {
     public int deadEnemys = 0;
+    public int needed_deaths = 8;
+    public GameObject ovi;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,9 @@ public class deathcounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (deadEnemys == needed_deaths)
+        {
+            ovi.SetActive(true);
+        }
     }
 }
