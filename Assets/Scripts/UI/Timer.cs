@@ -7,17 +7,17 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float startTime;
-    public float timer = 0;
+    public float t;
  
     void Start()
     {
-        startTime = Time.time;
+        t = 0;
+        
     }
 
     void Update()
     {
-        float t = Time.time;
+         t += Time.deltaTime;
 
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");

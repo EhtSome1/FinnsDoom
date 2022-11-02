@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3f3e14c6d0eaa9046925ed9a5f5fb44f
+  - enabled: 1
+    path: Assets/Scenes/DeathMenu.unity
+    guid: 577328e83686a634f9235cc4ed18faea
+  - enabled: 1
     path: Assets/Scenes/The_first_Map.unity
     guid: 8f9782fbb13c9ca4d8df6a822182a433
   - enabled: 1
     path: Assets/Scenes/The_second_map.unity
     guid: 4c0d12fbf6a89bd46b30f0605b177799
-  - enabled: 1
-    path: Assets/Scenes/DeathMenu.unity
-    guid: 577328e83686a634f9235cc4ed18faea
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 3f3e14c6d0eaa9046925ed9a5f5fb44f
   m_configObjects: {}

@@ -7,9 +7,9 @@ public class Destroyer666 : MonoBehaviour
     GameObject Tuhottava;
     void Start()
     {
-        Tuhottava = GameObject.Find("Canvas");
+        Tuhottava = GameObject.Find("DontDestroyOnLoad");
         Destroy(Tuhottava);
-        //Destroy(FindObjectOfType<dontDestroyOnLoad>());
+        Destroy(FindObjectOfType<dontDestroyOnLoad>());
 
     }
 

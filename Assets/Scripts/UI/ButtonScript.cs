@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     public void PlayGame()
     {
-        Destroy(FindObjectOfType<Timer>());
-        SceneManager.LoadScene(0);
-        
+        SceneManager.LoadScene(2);
+        Debug.Log("Scene vaihdettu");
     }
 
     public void QuitGame()
