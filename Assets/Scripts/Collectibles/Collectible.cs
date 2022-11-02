@@ -8,6 +8,8 @@ public class Collectible : MonoBehaviour
     public PlayerHP playerHP;
     public Animations animations;
 
+
+
     public static event Action OnCollected;
     void Update()
     {
@@ -16,6 +18,16 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (playerHP == null)
+        {
+            playerHP = other.gameObject.GetComponent<PlayerHP>();
+        }
+        if (animations == null)
+        {
+            animations = other.gameObject.GetComponent<Animations>();
+        }
+
+
         if (other.CompareTag("Player") && this.CompareTag("Health"))
         {
             OnCollected?.Invoke();
