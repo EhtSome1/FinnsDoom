@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
+
     public int playerHP = 100;
     public int playerArmor = 50;
     public Object sceneToLoad;
@@ -30,5 +31,6 @@ public class PlayerHP : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
 
 }
+
     }
 }
