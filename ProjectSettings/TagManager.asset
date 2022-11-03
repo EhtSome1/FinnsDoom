@@ -12,6 +12,7 @@ TagManager:
   - Double_Barrel_Ammo
   - WorldSwitch
   - murkku
+  - Jump_Pad
   layers:
   - Default
   - TransparentFX

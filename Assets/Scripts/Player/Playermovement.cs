@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Playermovement : MonoBehaviour
@@ -19,7 +17,7 @@ public class Playermovement : MonoBehaviour
     bool isGrounded;
     void Start()
     {
-        
+
     }
 
     void Update()

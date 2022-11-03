@@ -1,21 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
+    GameObject Player;
+    public Playermovement playermovement;
 
     void Start()
     {
-
+        Player = GameObject.Find("Player");
+        playermovement = Player.gameObject.GetComponent<Playermovement>();
+      
     }
-
-    void Update()
-    {
-
-    }
-
-    public Playermovement playermovement;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && this.CompareTag("Jump_Pad"))
@@ -23,20 +18,18 @@ public class JumpPad : MonoBehaviour
             Debug.Log("toimii");
             playermovement.jumpHeight = 5f;
 
-        }       
-       }
+        }
+    }
 
-    private void OnTriggerExit(Collider other)5z++§1234567890´Qerpoå
-        ÄSDFGÖÄ'
-        z< 
+    private void OnTriggerExit(Collider other)
     {
         playermovement.jumpHeight = 1f;
 
     }
 }
 
-    
-    
+
+
 
 
 
