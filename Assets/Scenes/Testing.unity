@@ -506,26 +506,14 @@ GameObject:
   - component: {fileID: 604480466}
   - component: {fileID: 604480465}
   - component: {fileID: 604480464}
-  - component: {fileID: 604480463}
+  - component: {fileID: 604480468}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Jump_Pad
+  m_Name: Trap_Pad
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &604480463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604480462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a89ad83fb5ba6418df2bf0820a3ec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &604480464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -537,8 +525,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2068323, y: 0.86528414, z: 1.2068323}
-  m_Center: {x: 0, y: 0.36352336, z: 0}
+  m_Size: {x: 1.2068323, y: 1.6971047, z: 1.2068323}
+  m_Center: {x: 0, y: 0.7794336, z: 0}
 --- !u!23 &604480465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -597,13 +585,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604480462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -193.84, y: 10.312, z: 206.92}
-  m_LocalScale: {x: 1.4773, y: 0.15780869, z: 1.4773}
+  m_LocalPosition: {x: -197.18, y: 10.312, z: 204.29}
+  m_LocalScale: {x: 9.579392, y: 0.15780869, z: 4.1921344}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &604480468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604480462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8a3da5dd56d0b428e563f5f9719fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerhp: {fileID: 1463806117}
+  LavaDamage: 5
+  TrapSlow: 4
+  playermovement: {fileID: 1463806116}
 --- !u!1 &614462219
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +622,7 @@ GameObject:
   - component: {fileID: 614462221}
   - component: {fileID: 614462220}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Jump_Pad
   m_TagString: Jump_Pad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,6 +893,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d48981a72d7a82b4998b715114e1d62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1463806117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5424091251170752454, guid: 0d3e61fccc992fc40810429fd7d6f7f6, type: 3}
+  m_PrefabInstance: {fileID: 242945915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50424cd7d5663ec4bae383d7eec24906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1558385992

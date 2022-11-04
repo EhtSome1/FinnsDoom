@@ -13,6 +13,7 @@ TagManager:
   - WorldSwitch
   - murkku
   - Jump_Pad
+  - Lava
   layers:
   - Default
   - TransparentFX
