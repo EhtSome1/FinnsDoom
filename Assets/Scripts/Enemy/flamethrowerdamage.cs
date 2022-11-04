@@ -18,7 +18,7 @@ public class flamethrowerdamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            playerHP.playerHP--;
+            playerHP.playerHP --;
         }
     }
 

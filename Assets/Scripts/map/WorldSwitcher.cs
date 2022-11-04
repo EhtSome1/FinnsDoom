@@ -9,7 +9,7 @@ public Object sceneToLoad;
     public
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && this.CompareTag("WorldSwitch"))
+        if (other.CompareTag("Player") /*&& this.CompareTag("WorldSwitch")*/)
         {
             SceneManager.LoadScene(sceneToLoad.name);
 
