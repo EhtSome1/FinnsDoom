@@ -18,7 +18,6 @@ public class TrapScript : MonoBehaviour
         Player = GameObject.Find("Player");
         playerhp = Player.gameObject.GetComponent<PlayerHP>();
         playermovement = Player.gameObject.GetComponent<Playermovement>();
-
     }
     public void PlayerTakesDamage()
     {
@@ -42,6 +41,7 @@ public class TrapScript : MonoBehaviour
     {
 
         playermovement.speed = 12f;
+        playermovement.jumpHeight = 1;
        
     }
 
