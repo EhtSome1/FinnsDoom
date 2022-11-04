@@ -29,6 +29,7 @@ public class Attack : MonoBehaviour
                 overDamage = -playerHP.playerArmor;
 
                 playerHP.playerHP -= overDamage;
+                HealthBar.health -= overDamage;
 
                 playerHP.playerArmor = 0;
             }

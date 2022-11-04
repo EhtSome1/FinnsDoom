@@ -13,7 +13,6 @@ public class PlayerHP : MonoBehaviour
     public Timer timer;
     public Playermovement move;
 
-
     void Start()
     {
         move = move.GetComponent<Playermovement>();
@@ -30,5 +29,6 @@ public class PlayerHP : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
 
 }
+
     }
 }
