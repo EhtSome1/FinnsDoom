@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &271352114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89c46db610f95f446b75dc97e4919a15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f41a166ee5794147ad33df11b882b33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5493,7 +5493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &539980133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5526,9 +5526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15078fba133facd4aa19d825016b2fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armorBar: {fileID: 0}
-  maxArmor: 100
-  playerArmor: {fileID: 1927904118046403162}
 --- !u!114 &539980135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5899,7 +5896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &767164223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7899,6 +7896,22 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 
       objectReference: {fileID: 102900000, guid: 4c0d12fbf6a89bd46b30f0605b177799, type: 3}
+    - target: {fileID: 9014214238906322199, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32392794
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014214238906322199, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
+      propertyPath: m_Center.x
+      value: 0.032743137
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014214238906322199, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
+      propertyPath: m_Center.y
+      value: -0.00000011802051
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014214238906322199, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
+      propertyPath: m_Center.z
+      value: 3.7322038e-18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
 --- !u!33 &1484500972881465393
