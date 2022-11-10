@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4435716382793265092}
   - component: {fileID: 4435716382793265093}
   m_Layer: 6
-  m_Name: muurahainen
+  m_Name: muurahainen 1
   m_TagString: murkku
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 3.52
-  m_Speed: 3
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ae7670f7105674bb2d68eb15fabda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 60
+  health: 50
 --- !u!114 &8564441188028013297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b948546219050440b35633e80f820b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathCounter: {fileID: 0}
+  hp: {fileID: 0}
 --- !u!1 &7393791332004385457
 GameObject:
   m_ObjectHideFlags: 0
