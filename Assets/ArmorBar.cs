@@ -1,26 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ArmorBar : MonoBehaviour
 {
-    public Playermovement playermovement;
-    Image armorBar;
+
+    public Image armorBar;
     public int maxArmor = 50;
-    public static float armor;
+    public static float Armor;
 
-    public PlayerHP HP;
-
+    public PlayerHP playerArmor;
     void Start()
     {
+        playerArmor = playerArmor.gameObject.GetComponent<PlayerHP>();
         armorBar = GetComponent<Image>();
-        playermovement = playermovement.gameObject.GetComponent<Playermovement>();
     }
 
-    private void Update()
-    {
-        armor = HP.playerHP;
-        armorBar.fillAmount = armor / maxArmor;
+    // Update is called once per frame
+    void Update()
 
+    {
+        Armor = playerArmor.playerArmor;
+        armorBar.fillAmount = Armor / maxArmor;
     }
 }
 
