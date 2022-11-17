@@ -22,8 +22,8 @@ public class shoot : MonoBehaviour
                     Debug.Log("Hit hytty!");
                     if (animations.currentWeapon == "saltgun")
                     {
-                        hyttyHealth enemyHP;
-                        enemyHP = other.gameObject.GetComponent<hyttyHealth>();
+                        enemyHealth enemyHP;
+                        enemyHP = other.gameObject.GetComponent<enemyHealth>();
 
                         enemyHP.health--;
                     }
