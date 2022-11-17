@@ -5,8 +5,11 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public GameObject player;
+    GameObject armorBarInner;
 
     PlayerHP playerHP;
+
+    ArmorBar armorBar;
 
     int overDamage;
 
@@ -23,6 +26,7 @@ public class Attack : MonoBehaviour
             if (playerHP.playerArmor > 0)
             {
                 playerHP.playerArmor -= attackDamage;
+                ArmorBar.Armor -= attackDamage;
             }
             if (playerHP.playerArmor < 0)
             {
@@ -45,15 +49,19 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        armorBarInner = GameObject.Find("ArmorBarInner");
+
         player = GameObject.Find("Player");
 
         playerHP = player.GetComponent<PlayerHP>();
+
+        armorBar = armorBarInner.gameObject.GetComponent<ArmorBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void enableAttack()

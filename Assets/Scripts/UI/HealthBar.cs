@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    Image healthBar;
+    public Image healthBar;
     public int maxHealth = 50;
     public static float health;
 
@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
 
     void Start()
     {
+        HP = HP.gameObject.GetComponent<PlayerHP>();
         healthBar = GetComponent<Image>();
 
     }
@@ -19,9 +20,8 @@ public class HealthBar : MonoBehaviour
     {
         health = HP.playerHP;
         healthBar.fillAmount = health / maxHealth;
-        
+
     }
 }
 
 
- 
