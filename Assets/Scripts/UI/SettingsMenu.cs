@@ -17,5 +17,11 @@ public class SettingsMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(qualityIndex);
     }
         
+    public void Change()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+        Debug.Log("Toimii");
     }
+}
+
 
