@@ -16,7 +16,8 @@ public class sniperShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.SetFloat("magAmmo", magAmmo);
+        animator.SetFloat("ammo", ammo);
     }
 
     // Update is called once per frame

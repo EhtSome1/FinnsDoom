@@ -6758,7 +6758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1923218079531346626
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7233,7 +7233,7 @@ MonoBehaviour:
   saltgunReloadHandleAnimator: {fileID: 6084573660904715432}
   saltgunAnimator: {fileID: 8870587724367049088}
   doubleBarrelAnimator: {fileID: 8271852562606459582}
-  currentWeapon: 
+  currentWeapon: saltgun
   saltgunAmmo: 30
   doubleBarrelAmmo: 30
   Switch: {fileID: 5424091250933184677}
@@ -7251,10 +7251,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saltGun: {fileID: 6924940806624710743}
   doubleBarrel: {fileID: 7623321365952572264}
+  sniper: {fileID: 1910993622748218106}
   weaponAnimations: {fileID: 5424091250933184676}
   canShangeWeapon: 1
-  hasSaltgun: 0
-  hasShotgun: 0
+  hasSaltgun: 1
+  hasShotgun: 1
+  hasSniper: 1
 --- !u!95 &5424091250933184678
 Animator:
   serializedVersion: 4
@@ -12484,7 +12486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &6976484977131001958
 MeshRenderer:
   m_ObjectHideFlags: 0
