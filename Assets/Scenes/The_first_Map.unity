@@ -7656,6 +7656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f79f5e1aabd9104e8d009c1b7e85f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
   maxHealth: 100
   HP: {fileID: 0}
 --- !u!33 &335524254760496272
@@ -8186,10 +8187,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saltGun: {fileID: 3575049055799018160}
   doubleBarrel: {fileID: 4056633521722734991}
+  sniper: {fileID: 0}
   weaponAnimations: {fileID: 1927904118046403139}
   canShangeWeapon: 1
   hasSaltgun: 0
   hasShotgun: 0
+  hasSniper: 0
 --- !u!114 &1927904118046403139
 MonoBehaviour:
   m_ObjectHideFlags: 0
