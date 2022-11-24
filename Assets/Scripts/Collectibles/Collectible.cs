@@ -6,13 +6,15 @@ public class Collectible : MonoBehaviour
     public PlayerHP playerHP;
     public Animations animations;
     public sniperShoot snipershoot;
+    public GameObject Player;
 
 
     private void Start()
     {
-        playerHP = playerHP.GetComponent<PlayerHP>();
-        animations = animations.GetComponent<Animations>();
-        snipershoot = snipershoot.GetComponent<sniperShoot>();
+        Player = GameObject.Find("Player");
+        playerHP = playerHP.gameObject.GetComponent<PlayerHP>();
+        animations = Player.gameObject.GetComponent<Animations>();
+        snipershoot = Player.gameObject.GetComponent<sniperShoot>();
 
     }
 
