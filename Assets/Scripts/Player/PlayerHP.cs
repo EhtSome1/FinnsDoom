@@ -10,6 +10,8 @@ public class PlayerHP : MonoBehaviour
     public Object sceneToLoad;
     int overDamage;
 
+    public GameObject canvas;
+
     public Timer timer;
     public Playermovement move;
 
@@ -22,13 +24,15 @@ public class PlayerHP : MonoBehaviour
     {
         if (playerHP <= 0)
         {
-            Destroy(gameObject);
+            
             Destroy(timer.gameObject);
+            Destroy(canvas);
+            Destroy(gameObject);
             move.canMove = false;
             SceneManager.LoadScene(1);
             Cursor.lockState = CursorLockMode.Confined;
 
-}
+        }
 
     }
 }

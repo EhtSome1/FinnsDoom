@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class ArmorBar : MonoBehaviour
 {
-
     public Image armorBar;
     public int maxArmor = 50;
-    public static float Armor;
+    public float Armor;
 
     public PlayerHP playerArmor;
+
+    GameObject player;
     void Start()
     {
-        playerArmor = playerArmor.gameObject.GetComponent<PlayerHP>();
+        player = GameObject.Find("Player");
+        playerArmor = player.gameObject.GetComponent<PlayerHP>();
         armorBar = GetComponent<Image>();
     }
 
