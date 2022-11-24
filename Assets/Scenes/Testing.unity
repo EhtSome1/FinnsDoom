@@ -354,6 +354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muurahainen 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3946565187744937336, guid: d130c267bbc1f0145b95a850cca47c17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4435716382793265090, guid: d130c267bbc1f0145b95a850cca47c17, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -585,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 3946565187744937336, guid: d130c267bbc1f0145b95a850cca47c17, type: 3}
       propertyPath: m_Name
       value: muurahainen 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946565187744937336, guid: d130c267bbc1f0145b95a850cca47c17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4435716382793265090, guid: d130c267bbc1f0145b95a850cca47c17, type: 3}
       propertyPath: m_RootOrder
@@ -923,6 +931,10 @@ PrefabInstance:
     - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
       propertyPath: m_Name
       value: The Hytty (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146268ec077cea84bb107c91455d2901, type: 3}
@@ -1727,6 +1739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Hytty (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146268ec077cea84bb107c91455d2901, type: 3}
 --- !u!1 &1452668484 stripped
@@ -1913,6 +1929,10 @@ PrefabInstance:
     - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
       propertyPath: m_Name
       value: The Hytty (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146268ec077cea84bb107c91455d2901, type: 3}
@@ -2266,6 +2286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Hytty (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146268ec077cea84bb107c91455d2901, type: 3}
 --- !u!1001 &1857888948
@@ -2476,6 +2500,10 @@ PrefabInstance:
     - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
       propertyPath: m_Name
       value: The Hytty
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719498058280166362, guid: 146268ec077cea84bb107c91455d2901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146268ec077cea84bb107c91455d2901, type: 3}
@@ -8408,7 +8436,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5424091250883597248}
   - component: {fileID: 5424091250883597255}
-  - component: {fileID: 5424091250883597254}
   - component: {fileID: 5424091250883597249}
   m_Layer: 7
   m_Name: Main Camera
@@ -8417,14 +8444,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &5424091250883597254
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5424091250883597253}
-  m_Enabled: 1
 --- !u!20 &5424091250883597255
 Camera:
   m_ObjectHideFlags: 0
@@ -8616,7 +8635,7 @@ GameObject:
   - component: {fileID: 5424091250933184676}
   - component: {fileID: 5424091250933184678}
   m_Layer: 7
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
