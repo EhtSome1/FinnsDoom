@@ -5,7 +5,9 @@ using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;   
+    public AudioMixer audioMixer;
+    public MouseLook mouseLook;
+
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
@@ -20,8 +22,9 @@ public class SettingsMenu : MonoBehaviour
     public void Change()
     {
         Screen.fullScreen = !Screen.fullScreen;
-        Debug.Log("Toimii");
     }
+
+
 }
 
 
