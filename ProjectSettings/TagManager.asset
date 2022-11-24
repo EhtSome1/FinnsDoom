@@ -14,6 +14,7 @@ TagManager:
   - murkku
   - Jump_Pad
   - Lava
+  - Sniper_Ammo
   layers:
   - Default
   - TransparentFX

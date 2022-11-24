@@ -1,19 +1,27 @@
-using System.Collections;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
     public PlayerHP playerHP;
     public Animations animations;
+    public sniperShoot snipershoot;
+    public GameObject Player;
 
 
+    private void Start()
+    {
+        Player = GameObject.Find("Player");
+        playerHP = playerHP.gameObject.GetComponent<PlayerHP>();
+        animations = Player.gameObject.GetComponent<Animations>();
+        snipershoot = Player.gameObject.GetComponent<sniperShoot>();
+
+    }
 
     public static event Action OnCollected;
     void Update()
     {
-        transform.Rotate(0f, 0f, 0.3f, Space.Self);
+        transform.Rotate(0f, 0.3f, 0f, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,20 +79,33 @@ public class Collectible : MonoBehaviour
                 animations.saltgunAmmo = 30;
             }
         }
-                if (other.CompareTag("Player") && this.CompareTag("Double_Barrel_Ammo"))
-                {
-                    OnCollected?.Invoke();
-                    if (animations.doubleBarrelAmmo < 30)
-                    {
-                        animations.doubleBarrelAmmo += 5;
-                        Destroy(gameObject);
-                    }
-                    if (animations.doubleBarrelAmmo > 30)
-                    {
-                        animations.doubleBarrelAmmo = 30;
-                    }
-                }
+        if (other.CompareTag("Player") && this.CompareTag("Double_Barrel_Ammo"))
+        {
+            OnCollected?.Invoke();
+            if (animations.doubleBarrelAmmo < 30)
+            {
+                animations.doubleBarrelAmmo += 5;
+                Destroy(gameObject);
+            }
+            if (animations.doubleBarrelAmmo > 30)
+            {
+                animations.doubleBarrelAmmo = 30;
             }
         }
-    
+            if (other.CompareTag("Player") && this.CompareTag("Sniper_Ammo"))
+            {
+                OnCollected?.Invoke();
+                if (snipershoot.ammo < 20)
+                {
+                    snipershoot.ammo += 5;
+                    Destroy(gameObject);
+                }
+                if (snipershoot.ammo > 20)
+                {
+                    snipershoot.ammo = 20;
+                }
+        }
+    }
+}
+
 

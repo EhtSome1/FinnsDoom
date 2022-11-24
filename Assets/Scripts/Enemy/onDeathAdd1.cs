@@ -14,7 +14,7 @@ public class onDeathAdd1 : MonoBehaviour
 
         DeathCounter = Deathcounter.GetComponent<deathcounter>();
 
-        //hp = gameObject.GetComponent<enemyHealth>();
+        hp = gameObject.GetComponent<enemyHealth>();
     }
 
     void Update()
