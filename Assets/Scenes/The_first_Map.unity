@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 82969a599bd3e98419cb6c51d3c11427, type: 2}
+--- !u!1 &38938743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4428098075847258374, guid: 0d3e61fccc992fc40810429fd7d6f7f6, type: 3}
+  m_PrefabInstance: {fileID: 1809059597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &38938744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38938743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab50d94b14e24543bbda287e19933e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &81918708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5746,11 +5763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 419755030899741579, guid: 0bd3ad6294ffb9e48823bfb1b412f1f2, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.61960787
       objectReference: {fileID: 0}
     - target: {fileID: 419755030899741579, guid: 0bd3ad6294ffb9e48823bfb1b412f1f2, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.61960787
       objectReference: {fileID: 0}
     - target: {fileID: 419755030899741579, guid: 0bd3ad6294ffb9e48823bfb1b412f1f2, type: 3}
       propertyPath: m_Color.r
