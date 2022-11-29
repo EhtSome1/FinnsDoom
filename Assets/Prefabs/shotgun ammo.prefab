@@ -112,3 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHP: {fileID: 0}
   animations: {fileID: 0}
+  snipershoot: {fileID: 0}
+  Player: {fileID: 0}

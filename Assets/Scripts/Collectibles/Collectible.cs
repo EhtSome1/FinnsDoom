@@ -22,7 +22,7 @@ public class Collectible : MonoBehaviour
     void Update()
     {
 
-        if (gameObject.tag == ("Salt_Ammo"))
+        if (gameObject.tag == ("Salt_Ammo") || gameObject.tag ==("Double_Barrel_Ammo"))
         {
         transform.Rotate(0f, 0f, 0.3f, Space.Self);
         }
