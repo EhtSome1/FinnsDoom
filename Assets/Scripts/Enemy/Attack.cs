@@ -52,7 +52,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         armorBarInner = GameObject.Find("ArmorBarInner");
-        healthBarInner = GameObject.Find("ArmorBarInner");
+        healthBarInner = GameObject.Find("HealthBarInner");
 
         player = GameObject.Find("Player");
 
