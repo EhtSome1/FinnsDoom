@@ -30,7 +30,7 @@ public class Attack : MonoBehaviour
                 playerHP.playerArmor -= attackDamage;
                 armorBar.Armor -= attackDamage;
             }
-            if (playerHP.playerArmor < 0)
+            if (playerHP.playerArmor > 0)
             {
                 overDamage = -playerHP.playerArmor;
 
