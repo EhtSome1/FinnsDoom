@@ -21,7 +21,15 @@ public class Collectible : MonoBehaviour
     public static event Action OnCollected;
     void Update()
     {
+
+        if (gameObject.tag == ("Salt_Ammo"))
+        {
+        transform.Rotate(0f, 0f, 0.3f, Space.Self);
+        }
+        else
+        {
         transform.Rotate(0f, 0.3f, 0f, Space.Self);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
