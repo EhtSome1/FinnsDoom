@@ -32623,7 +32623,7 @@ GameObject:
   - component: {fileID: 9113301709660625945}
   - component: {fileID: 9113301709660625944}
   m_Layer: 0
-  m_Name: sniper
+  m_Name: sniperPickUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

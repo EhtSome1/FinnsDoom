@@ -21,6 +21,7 @@ public class Animations : MonoBehaviour
 
     public int saltgunAmmo = 30;
     public int doubleBarrelAmmo = 30;
+    public int doubleBarrelMagAmmo = 2;
 
     public switchWeapon Switch;
 
@@ -52,6 +53,7 @@ public class Animations : MonoBehaviour
                     pelletParticle.Play();
 
                     doubleBarrelAmmo--;
+                    doubleBarrelMagAmmo--;
 
                     hasShot = true;
 
@@ -67,6 +69,7 @@ public class Animations : MonoBehaviour
                     Invoke("canChange", 3.4f);
 
                     doubleBarrelAmmo--;
+                    doubleBarrelMagAmmo--;
                 }
 
                 break;
@@ -114,6 +117,11 @@ public class Animations : MonoBehaviour
         canReload = true;
 
         hasShot = false;
+
+        if(currentWeapon=="doubleBarrel")
+        {
+            doubleBarrelMagAmmo = 2;
+        }
     }
 
     void canShoot2()
