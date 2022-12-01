@@ -5,6 +5,8 @@ public class JumpPad : MonoBehaviour
     GameObject Player;
     public Playermovement playermovement;
 
+    public float JumpHeight;
+
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -16,7 +18,7 @@ public class JumpPad : MonoBehaviour
         if (other.CompareTag("Player") && this.CompareTag("Jump_Pad"))
         {
             Debug.Log("toimii");
-            playermovement.jumpHeight = 5f;
+            playermovement.jumpHeight = JumpHeight;
 
         }
     }
