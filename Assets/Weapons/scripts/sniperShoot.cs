@@ -11,18 +11,11 @@ public class sniperShoot : MonoBehaviour
 
     public Animator animator;
 
-    switchWeapon Switch;
-
     public GameObject sniper;
-    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
-
-        Switch = player.gameObject.GetComponent<switchWeapon>();
-
         animator.SetFloat("magAmmo", magAmmo);
         animator.SetFloat("ammo", ammo);
     }
@@ -73,8 +66,6 @@ public class sniperShoot : MonoBehaviour
             animator.SetFloat("magAmmo", magAmmo);
             animator.SetFloat("ammo", ammo);
 
-            Switch.canShangeWeapon = false;
-
             Invoke("enableShoot", 1.5f);
         }
         if (magAmmo <= 0 && ammo > 0)
@@ -88,8 +79,6 @@ public class sniperShoot : MonoBehaviour
 
     void changeMag()
     {
-        Switch.canShangeWeapon = false;
-
         canShoot = false;
 
         Invoke("putAmmoToMag", 5.4f);
@@ -116,7 +105,6 @@ public class sniperShoot : MonoBehaviour
     void enableShoot()
     {
         canShoot = true;
-        Switch.canShangeWeapon = true;
     }
 
     void dontReload()

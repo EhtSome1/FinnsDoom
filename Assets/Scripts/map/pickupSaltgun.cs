@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class pickupSaltgun : MonoBehaviour
 {
-    GameObject player;
-
     public switchWeapon Switch;
     public Animations animations;
 
@@ -26,11 +24,5 @@ public class pickupSaltgun : MonoBehaviour
                 Switch.saltGun.SetActive(true);
             }
         }
-    }
-    void Start()
-    {
-        player = GameObject.Find("Player");
-        Switch = player.gameObject.GetComponent<switchWeapon>();
-        animations = player.gameObject.GetComponent<Animations>();
     }
 }

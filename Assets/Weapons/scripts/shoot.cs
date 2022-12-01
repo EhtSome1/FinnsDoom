@@ -10,13 +10,16 @@ public class shoot : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
+        Debug.Log("Hit something!");
 
         if (other.gameObject.layer == 6)
         {
-
+            Debug.Log("Hit something");
+            Debug.Log("Hit enemy!");
             switch (other.gameObject.tag)
             {
                 case "hytty":
+                    Debug.Log("Hit hytty!");
                     if (animations.currentWeapon == "saltgun")
                     {
                         enemyHealth enemyHP;
@@ -27,6 +30,7 @@ public class shoot : MonoBehaviour
                     break;
 
                 case "murkku":
+                    Debug.Log("Hit murkku");
                     if (animations.currentWeapon == "doubleBarrel")
                     {
                         enemyHealth enemyHP;
@@ -37,6 +41,7 @@ public class shoot : MonoBehaviour
                     break;
             }
 
+            Debug.Log("Hit enemy!");
         }
     }
 

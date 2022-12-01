@@ -6,12 +6,10 @@ public class Attack : MonoBehaviour
 {
     public GameObject player;
     GameObject armorBarInner;
-    GameObject healthBarInner;
 
     PlayerHP playerHP;
 
     ArmorBar armorBar;
-    HealthBar healthBar;
 
     int overDamage;
 
@@ -28,13 +26,15 @@ public class Attack : MonoBehaviour
             if (playerHP.playerArmor > 0)
             {
                 playerHP.playerArmor -= attackDamage;
-                armorBar.Armor -= attackDamage;
+                ArmorBar.Armor -= attackDamage;
             }
             if (playerHP.playerArmor < 0)
             {
                 overDamage = -playerHP.playerArmor;
+
                 playerHP.playerHP -= overDamage;
-                healthBar.health -= overDamage;
+                HealthBar.health -= overDamage;
+
                 playerHP.playerArmor = 0;
             }
             else if (playerHP.playerArmor <= 0)
@@ -50,14 +50,12 @@ public class Attack : MonoBehaviour
     void Start()
     {
         armorBarInner = GameObject.Find("ArmorBarInner");
-        healthBarInner = GameObject.Find("HealthBarInner");
 
         player = GameObject.Find("Player");
 
         playerHP = player.GetComponent<PlayerHP>();
 
         armorBar = armorBarInner.gameObject.GetComponent<ArmorBar>();
-        healthBar = healthBarInner.gameObject.GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
