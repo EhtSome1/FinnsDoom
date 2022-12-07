@@ -7849,6 +7849,10 @@ PrefabInstance:
       value: first_map (2)
       objectReference: {fileID: 0}
     - target: {fileID: 9014214238906322198, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
+      propertyPath: hasKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014214238906322198, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
       propertyPath: sceneToLoad
       value: 
       objectReference: {fileID: 102900000, guid: 4c0d12fbf6a89bd46b30f0605b177799, type: 3}
