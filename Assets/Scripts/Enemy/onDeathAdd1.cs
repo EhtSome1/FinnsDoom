@@ -11,16 +11,16 @@ public class onDeathAdd1 : MonoBehaviour
     void Start()
     {
         Deathcounter = GameObject.Find("deathCounter");
-
         DeathCounter = Deathcounter.GetComponent<deathcounter>();
-
-        hp = gameObject.GetComponent<enemyHealth>();
     }
 
     void Update()
     {
+        Debug.Log("?");
+
         if (hp.health <= 0)
         {
+            Debug.Log("hp = 0");
             DeathCounter.deadEnemys++;
         }
     }
