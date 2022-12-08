@@ -1,13 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float projectileDamage;
+    GameObject Player;
+    public PlayerHP playerhp;
+    public int projectileDamage;
     public float projectileSpeed;
     float destroyTime = 10;
 
+    private void Start()
+    {
+        Player = GameObject.Find("Player");
+        playerhp = Player.gameObject.GetComponent<PlayerHP>();
+    }
     void Update()
     {
         destroyTime -= Time.deltaTime;
@@ -22,6 +27,8 @@ public class Projectile : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log(playerhp.playerHP);
+            playerhp.playerHP -= projectileDamage;
             Destroy(gameObject);
         }
 

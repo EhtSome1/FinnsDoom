@@ -29,7 +29,7 @@ public class PlayerHP : MonoBehaviour
             Destroy(canvas);
             Destroy(gameObject);
             move.canMove = false;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("DeathMenu");
             Cursor.lockState = CursorLockMode.Confined;
 
         }

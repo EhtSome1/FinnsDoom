@@ -33,7 +33,6 @@ public class TrapScript : MonoBehaviour
             {
                 startTime = Time.time;
                 PlayerTakesDamage();
-                Debug.Log("Hit");
             }
         }     
     }  

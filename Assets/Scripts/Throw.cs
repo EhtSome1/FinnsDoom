@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Throw : MonoBehaviour
 {
+    public PlayerHP playerhp;
     public Transform target;
     public float attackSpeed;
     float timer;
     public GameObject projectilePrefab;
     void Start()
     {
-
+        target = GameObject.Find("Player").transform;
     }
     void Update()
     {
