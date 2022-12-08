@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 0b774ac270fb48041b64ed2d6346d1f5
+  - enabled: 1
+    path: Assets/Scenes/BucketDefeatMenu.unity
+    guid: ba1b687acc4211349a0f6d955f39fe87
   m_configObjects: {}
