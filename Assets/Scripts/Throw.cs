@@ -7,22 +7,17 @@ public class Throw : MonoBehaviour
     public Transform target;
     public float attackSpeed;
     float timer;
-
     public GameObject projectilePrefab;
-
-    // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (target != null)
         {
-            Vector3 dir = target.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Vector3 dir = new Vector3(target.position.x, transform.position.y, target.transform.position.z) - transform.position;
+            float angle = Mathf.Atan(dir.x) * Mathf.Rad2Deg;
 
             timer -= Time.deltaTime;
             if (timer <= 0)
