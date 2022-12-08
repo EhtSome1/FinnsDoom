@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class enemyHealth : MonoBehaviour
 {
-    public GameObject itself;
-
     public int health = 100;
 
     // Update is called once per frame
@@ -13,7 +11,7 @@ public class enemyHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(itself);
+            Destroy(gameObject);
 
             Debug.Log("Killed enemy");
         }
