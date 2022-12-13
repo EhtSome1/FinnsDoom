@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
     public PlayerHP playerhp;
     public int projectileDamage;
     public float projectileSpeed;
-    float destroyTime = 10;
+    float destroyTime = 5;
 
     private void Start()
     {
