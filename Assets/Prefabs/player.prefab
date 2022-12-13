@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 4428098075847258398}
   - component: {fileID: 4428098075847258396}
   m_Layer: 7
-  m_Name: Player
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -803,6 +803,7 @@ MonoBehaviour:
   playerHP: 100
   playerArmor: 50
   sceneToLoad: {fileID: 0}
+  canvas: {fileID: 0}
   timer: {fileID: 0}
   move: {fileID: 4428098075847258369}
 --- !u!114 &4428098075847258369
@@ -4797,7 +4798,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 383
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -10261,7 +10262,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 383
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
