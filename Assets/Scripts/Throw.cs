@@ -18,7 +18,6 @@ public class Throw : MonoBehaviour
         {
             Vector3 dir = new Vector3(target.position.x, transform.position.y, target.transform.position.z) - transform.position;
             float angle = Mathf.Atan(dir.x) * Mathf.Rad2Deg;
-
             timer -= Time.deltaTime;
             if (timer <= 0)
             {

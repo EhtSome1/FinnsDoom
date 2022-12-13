@@ -21,6 +21,7 @@ public class TrapScript : MonoBehaviour
     }
     public void PlayerTakesDamage()
     {
+        Debug.Log(playerhp.playerHP);
         playerhp.playerHP -= LavaDamage;
     }
     private void OnTriggerStay(Collider other)
