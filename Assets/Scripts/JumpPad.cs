@@ -5,7 +5,7 @@ public class JumpPad : MonoBehaviour
     GameObject Player;
     public Playermovement playermovement;
 
-    public float JumpHeight;
+    public float JumpPower;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class JumpPad : MonoBehaviour
         if (other.CompareTag("Player") && this.CompareTag("Jump_Pad"))
         {
             Debug.Log("toimii");
-            playermovement.jumpHeight = JumpHeight;
+            playermovement.jumpHeight = JumpPower;
 
         }
     }
