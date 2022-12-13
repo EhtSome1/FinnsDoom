@@ -105,8 +105,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4719498057903083414}
   - component: {fileID: 4719498057903083409}
-  - component: {fileID: 4719498057903083408}
   - component: {fileID: 4719498057903083415}
+  - component: {fileID: 2360741703572644253}
   m_Layer: 6
   m_Name: Hytty
   m_TagString: hytty
@@ -158,20 +158,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.5, y: 6.606283, z: 4.39}
   m_Center: {x: 1.1999999, y: -1.6181374, z: -0.000000058513}
---- !u!114 &4719498057903083408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4719498057903083413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8715dbc31a8cf44e87d1b2736a1baa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hytty: {fileID: 4719498058280166362}
-  health: 20
 --- !u!95 &4719498057903083415
 Animator:
   serializedVersion: 4
@@ -192,6 +178,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2360741703572644253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719498057903083413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ae7670f7105674bb2d68eb15fabda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &4719498057954279366
 GameObject:
   m_ObjectHideFlags: 0

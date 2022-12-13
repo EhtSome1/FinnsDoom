@@ -5,13 +5,16 @@ public class HealthBar : MonoBehaviour
 {
     public Image healthBar;
     public int maxHealth = 50;
-    public static float health;
+    public float health;
 
     public PlayerHP HP;
 
+    GameObject player;
+
     void Start()
     {
-        HP = HP.gameObject.GetComponent<PlayerHP>();
+        player = GameObject.Find("Player");
+        HP = player.gameObject.GetComponent<PlayerHP>();
         healthBar = GetComponent<Image>();
 
     }
