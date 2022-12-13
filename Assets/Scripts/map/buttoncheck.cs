@@ -23,6 +23,7 @@ public class buttoncheck : MonoBehaviour
         {
             animator.SetBool("doorOpen", true);
             doorOpen = true;
+            gameObject.SetActive(false);
         }
     }
 }
