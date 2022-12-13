@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pickUpBucket : MonoBehaviour
 {
     public bool inArea = false;
-
+    GameObject player;
 
     void OnTriggerEnter(Collider other)
     {
@@ -24,6 +25,11 @@ public class pickUpBucket : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +41,8 @@ public class pickUpBucket : MonoBehaviour
 
     void victory()
     {
+        Destroy(player);
 
+        SceneManager.LoadScene(7);
     }
 }
