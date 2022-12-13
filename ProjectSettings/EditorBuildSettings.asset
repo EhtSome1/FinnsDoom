@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/victory.unity
     guid: 95f60671a44f01344a770102b528068c
+  - enabled: 1
+    path: Assets/Scenes/the_fourth_map.unity
+    guid: 5624c618d0f98cb44aa98b958f706b8b
   m_configObjects: {}
