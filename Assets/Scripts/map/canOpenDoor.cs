@@ -18,7 +18,7 @@ public class canOpenDoor : MonoBehaviour
             {
                 dooranim.SetBool("doorOpen", true);
                 Debug.Log("Door opened");
-                SceneManager.LoadScene(sceneToLoad.name);
+                SceneManager.LoadScene("The_second_map");
             }
         }
     }
