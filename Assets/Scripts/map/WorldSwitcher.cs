@@ -5,15 +5,12 @@ using UnityEngine.SceneManagement;
 public class WorldSwitcher : MonoBehaviour
 {
 
-public Object sceneToLoad;
-    public
+    public Object sceneToLoad;
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") /*&& this.CompareTag("WorldSwitch")*/)
+        if (other.gameObject.name == "Player") /*&& this.CompareTag("WorldSwitch")*/
         {
             SceneManager.LoadScene(sceneToLoad.name);
-
-
         }
     }
 
