@@ -8,11 +8,9 @@ public class WorldSwitcher : MonoBehaviour
     public Object sceneToLoad;
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") /*&& this.CompareTag("WorldSwitch")*/)
+        if (other.gameObject.name == "Player") /*&& this.CompareTag("WorldSwitch")*/
         {
             SceneManager.LoadScene(sceneToLoad.name);
-
-
         }
         if (other.tag == "Player" && other.tag == "Ovi")
         {
