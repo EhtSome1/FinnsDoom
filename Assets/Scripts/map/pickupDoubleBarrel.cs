@@ -9,6 +9,8 @@ public class pickupDoubleBarrel : MonoBehaviour
     switchWeapon Switch;
     Animations animations;
 
+    bool inArea = false;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -17,9 +19,24 @@ public class pickupDoubleBarrel : MonoBehaviour
         animations = player.gameObject.GetComponent<Animations>();
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
+        {
+            inArea = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inArea = false;
+        }
+    }
+
+    void Update()
+    {
+        if(inArea)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
