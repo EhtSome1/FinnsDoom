@@ -31,6 +31,10 @@ public class Projectile : MonoBehaviour
             playerhp.playerHP -= projectileDamage;
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
