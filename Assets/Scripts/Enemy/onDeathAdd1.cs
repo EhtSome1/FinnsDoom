@@ -8,6 +8,8 @@ public class onDeathAdd1 : MonoBehaviour
     deathcounter DeathCounter;
     public enemyHealth hp;
 
+    bool hasAdded = false;
+
     void Start()
     {
         Deathcounter = GameObject.Find("deathCounter");
@@ -18,10 +20,11 @@ public class onDeathAdd1 : MonoBehaviour
     {
         Debug.Log("?");
 
-        if (hp.health <= 0)
+        if (hp.health <= 0 && !hasAdded)
         {
             Debug.Log("hp = 0");
             DeathCounter.deadEnemys++;
+            hasAdded = true;
         }
     }
 }
