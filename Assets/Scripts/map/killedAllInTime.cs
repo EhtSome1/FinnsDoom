@@ -62,6 +62,8 @@ public class killedAllInTime : MonoBehaviour
     }
     void defeatScreen()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+
         SceneManager.LoadScene(6);
     }
 }
