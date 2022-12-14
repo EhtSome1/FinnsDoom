@@ -9,22 +9,21 @@ public class pickupSaltgun : MonoBehaviour
     public switchWeapon Switch;
     public Animations animations;
 
-    void OnTriggerStay(Collider other)
+    bool inArea = false;
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                animations.currentWeapon = "saltgun";
+            inArea = true;
+        }
+    }
 
-                Destroy(gameObject);
-
-                Debug.Log("picked up saltgun");
-
-                Switch.hasSaltgun = true;
-
-                Switch.saltGun.SetActive(true);
-            }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inArea = false;
         }
     }
     void Start()
@@ -32,5 +31,21 @@ public class pickupSaltgun : MonoBehaviour
         player = GameObject.Find("Player");
         Switch = player.gameObject.GetComponent<switchWeapon>();
         animations = player.gameObject.GetComponent<Animations>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animations.currentWeapon = "saltgun";
+
+            Destroy(gameObject);
+
+            Debug.Log("picked up saltgun");
+
+            Switch.hasSaltgun = true;
+
+            Switch.saltGun.SetActive(true);
+        }
     }
 }
