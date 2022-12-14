@@ -15,6 +15,7 @@ TagManager:
   - Jump_Pad
   - Lava
   - Sniper_Ammo
+  - Ovi
   layers:
   - Default
   - TransparentFX
