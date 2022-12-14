@@ -11,7 +11,7 @@ public Object sceneToLoad;
     {
         if (other.CompareTag("Player") /*&& this.CompareTag("WorldSwitch")*/)
         {
-            SceneManager.LoadScene("The_fourth_map");
+            SceneManager.LoadScene(sceneToLoad.name);
 
 
         }
