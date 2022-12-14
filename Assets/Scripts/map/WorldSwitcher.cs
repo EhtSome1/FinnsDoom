@@ -12,6 +12,11 @@ public class WorldSwitcher : MonoBehaviour
         {
             SceneManager.LoadScene(sceneToLoad.name);
         }
+        if (other.tag == "Player" && other.tag == "Ovi")
+        {
+            SceneManager.LoadScene("The_fourth_map");
+        }
     }
+
 
 }
