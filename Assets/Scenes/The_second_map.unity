@@ -15139,15 +15139,15 @@ GameObject:
   - component: {fileID: 5974856058034369418}
   - component: {fileID: 7378818090894219043}
   - component: {fileID: 7378818090894219042}
-  - component: {fileID: 7378818090894219044}
   - component: {fileID: 7378818090894219045}
+  - component: {fileID: 7378818090894219046}
   m_Layer: 0
   m_Name: ovi
   m_TagString: Ovi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &7378818090894219042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15174,19 +15174,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.021561757, y: 0.019999998, z: 0.019999996}
   m_Center: {x: 0.0007808781, y: 0, z: 0}
---- !u!114 &7378818090894219044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7378818090894219041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc9a1be92bcbe4f4c95ef2badf8945f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 102900000, guid: 5624c618d0f98cb44aa98b958f706b8b, type: 3}
 --- !u!54 &7378818090894219045
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15203,6 +15190,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &7378818090894219046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378818090894219041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa61aeaeea5e034394b57bb6f4be7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7387807777406271034
 GameObject:
   m_ObjectHideFlags: 0

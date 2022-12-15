@@ -17,6 +17,4 @@ public class WorldSwitcher : MonoBehaviour
             SceneManager.LoadScene("The_fourth_map");
         }
     }
-
-
 }
