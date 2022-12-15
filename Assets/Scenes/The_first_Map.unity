@@ -6531,6 +6531,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 419755030899741579, guid: 0bd3ad6294ffb9e48823bfb1b412f1f2, type: 3}
+      propertyPath: m_CookieSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 419755030899741579, guid: 0bd3ad6294ffb9e48823bfb1b412f1f2, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 419755030899741579, guid: 0bd3ad6294ffb9e48823bfb1b412f1f2, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 2
       objectReference: {fileID: 0}
@@ -8487,7 +8495,7 @@ PrefabInstance:
     - target: {fileID: 9014214238906322198, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
       propertyPath: sceneToLoad
       value: 
-      objectReference: {fileID: 102900000, guid: 4c0d12fbf6a89bd46b30f0605b177799, type: 3}
+      objectReference: {fileID: 102900000, guid: 5624c618d0f98cb44aa98b958f706b8b, type: 3}
     - target: {fileID: 9014214238906322199, guid: 1266498a2cce0234da4918794e162d3e, type: 3}
       propertyPath: m_Size.x
       value: 0.32392794
