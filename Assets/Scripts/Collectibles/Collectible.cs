@@ -63,7 +63,7 @@ public class Collectible : MonoBehaviour
             OnCollected?.Invoke();
             if (playerHP.playerArmor < 50)
             {
-                playerHP.playerArmor += 5;
+                playerHP.playerArmor += 10;
                 Destroy(gameObject);
 
             }
