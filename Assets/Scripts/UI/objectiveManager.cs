@@ -8,19 +8,28 @@ public class objectiveManager : MonoBehaviour
 {
     GameObject player;
     GameObject Door;
+    GameObject secondMapDeathCounter;
+    GameObject finalMapDeathCounter;
 
     public switchWeapon SwitchWeapon;
 
     public TextMeshProUGUI text;
     canOpenDoor door;
+    deathcounter secondMapDeathCounterScript;
+    deathcounter finalMapDeathCounterScript;
 
     bool changeObjective2 = false;
     bool changeObjective3 = false;
+    bool changeObjective4 = false;
+    bool changeObjective5 = false;
+    bool changeObjective6 = false;
+    bool changeObjective7 = false;
 
+    // all objective texts
     string[] firstMapObjectives = {"Get The Saltgun", "Get The Key", "Get To The Door" };
-    string[] SecondMapObjectives = {"Get the shotgun and kill all enemies!", "Get to next level through the door!"};
-    string[] thirdMapObjectives = {"Get to the top of the tower!" };
-    string[] finalMapObjectives = { "Find all three buttons", "Go prepairing room to prepaire to save the bucket", "KILL THE ALL!!!" };
+    string[] SecondMapObjectives = {"Get The Shotgun And Kill All Enemies!", "Get To Next Level Through The Door!"};
+    string[] thirdMapObjectives = {"Get To The Top Of The Tower!" };
+    string[] finalMapObjectives = { "Find All Three Buttons", "Go Prepairing Room To Prepaire To Save The Bucket", "KILL THE ALL!!!" };
 
     int currentScene;
 
@@ -36,14 +45,13 @@ public class objectiveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set all objectives for all levels
         if (SceneManager.GetActiveScene().name == "The_first_Map")
         {
             if (door == null)
             {
                 getNeededFirstMap();
             }
-            Debug.Log("has saltgun = " + SwitchWeapon.hasSaltgun);
-
             if (SwitchWeapon.hasSaltgun && !changeObjective2)
             {
                 firstObjective2();
@@ -57,6 +65,28 @@ public class objectiveManager : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "The_second_map")
         {
+            if (secondMapDeathCounter == null)
+            {
+                getNeededSecondMap();
+            }
+
+            if (!SwitchWeapon.hasShotgun)
+            {
+                secondObjective1();
+            }
+
+            if (secondMapDeathCounterScript.deadEnemys == secondMapDeathCounterScript.needed_deaths && !changeObjective4)
+            {
+                secondObjective2();
+                changeObjective4 = true;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "the_fourth_map")
+        {
+            thirdObjective1();
+        }
+        if (SceneManager.GetActiveScene().name == "The_Final_Map")
+        {
 
         }
     }
@@ -65,7 +95,12 @@ public class objectiveManager : MonoBehaviour
         Door = GameObject.Find("ovi");
         door = Door.gameObject.GetComponent<canOpenDoor>();
     }
-
+    void getNeededSecondMap()
+    {
+        secondMapDeathCounter = GameObject.Find("deathCounter");
+        secondMapDeathCounterScript = secondMapDeathCounter.gameObject.GetComponent<deathcounter>();
+    }
+    // first = 1. level      second = 2.level ...
     void firstObjective2()
     {
         text.text = firstMapObjectives[1];
@@ -73,5 +108,29 @@ public class objectiveManager : MonoBehaviour
     void firstObjective3()
     {
         text.text = firstMapObjectives[2];
+    }
+    void secondObjective1()
+    {
+        text.text = SecondMapObjectives[0];
+    }
+    void secondObjective2()
+    {
+        text.text = SecondMapObjectives[1];
+    }
+    void thirdObjective1()
+    {
+        text.text = thirdMapObjectives[0];
+    }
+    void finalObjective1()
+    {
+        text.text = finalMapObjectives[0];
+    }
+    void finalObjective2()
+    {
+        text.text = finalMapObjectives[1];
+    }
+    void finalObjective3()
+    {
+        text.text = finalMapObjectives[2];
     }
 }

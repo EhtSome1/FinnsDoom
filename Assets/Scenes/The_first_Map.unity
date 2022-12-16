@@ -2315,7 +2315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1160403570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2323,19 +2323,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160403569}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2081876039}
+  m_Children: []
   m_Father: {fileID: 1879355256}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000005722, y: 502.3}
-  m_SizeDelta: {x: 382.3132, y: 51.269}
+  m_AnchoredPosition: {x: -0.8441, y: 503.9884}
+  m_SizeDelta: {x: 1160.625, y: 54.6457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160403571
 MonoBehaviour:
@@ -3360,6 +3359,7 @@ RectTransform:
   - {fileID: 1552005224}
   - {fileID: 620064812}
   - {fileID: 1160403570}
+  - {fileID: 2081876039}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3595,12 +3595,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1160403570}
-  m_RootOrder: 0
+  m_Father: {fileID: 1879355256}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.892395, y: -8.683899}
+  m_AnchoredPosition: {x: 160.65, y: 494.42}
   m_SizeDelta: {x: 321.2906, y: 59.7419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081876040
@@ -3623,7 +3623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Get The Saltgun
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d097d584067ad864e8d62a194fce45d5, type: 2}
   m_sharedMaterial: {fileID: 2857221218436579918, guid: d097d584067ad864e8d62a194fce45d5, type: 2}
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -70.38995, y: 0, z: -70.38989, w: 0}
+  m_margin: {x: -582.28375, y: 0, z: -273.07617, w: 14.794556}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
