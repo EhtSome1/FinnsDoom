@@ -43,6 +43,8 @@ public class pickUpBucket : MonoBehaviour
     {
         Destroy(player);
 
+        Cursor.lockState = CursorLockMode.Confined;
+
         SceneManager.LoadScene(7);
     }
 }
