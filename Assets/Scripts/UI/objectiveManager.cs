@@ -162,6 +162,6 @@ public class objectiveManager : MonoBehaviour
     }
     void finalObjective4()
     {
-        text.text = firstMapObjectives[3];
+        text.text = finalMapObjectives[3];
     }
 }
