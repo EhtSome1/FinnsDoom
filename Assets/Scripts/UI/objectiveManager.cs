@@ -7,31 +7,29 @@ using UnityEngine.SceneManagement;
 public class objectiveManager : MonoBehaviour
 {
     GameObject player;
-    GameObject Door;
+    GameObject ovi;
     GameObject secondMapDeathCounter;
+    GameObject finalMapDoor;
     GameObject finalMapDeathCounter;
 
     public switchWeapon SwitchWeapon;
-
     public TextMeshProUGUI text;
     canOpenDoor door;
     deathcounter secondMapDeathCounterScript;
     deathcounter finalMapDeathCounterScript;
+    buttoncheck buttons;
 
     bool changeObjective2 = false;
     bool changeObjective3 = false;
     bool changeObjective4 = false;
     bool changeObjective5 = false;
-    bool changeObjective6 = false;
-    bool changeObjective7 = false;
+    public bool inBattle;
 
     // all objective texts
     string[] firstMapObjectives = {"Get The Saltgun", "Get The Key", "Get To The Door" };
     string[] SecondMapObjectives = {"Get The Shotgun And Kill All Enemies!", "Get To Next Level Through The Door!"};
     string[] thirdMapObjectives = {"Get To The Top Of The Tower!" };
-    string[] finalMapObjectives = { "Find All Three Buttons", "Go Prepairing Room To Prepaire To Save The Bucket", "KILL THE ALL!!!" };
-
-    int currentScene;
+    string[] finalMapObjectives = {"Find All Three Buttons", "Go Prepairing Room To Prepaire To Save The Bucket", "KILL THE ALL!!!", "Get The Bucket"};
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +75,7 @@ public class objectiveManager : MonoBehaviour
 
             if (secondMapDeathCounterScript.deadEnemys == secondMapDeathCounterScript.needed_deaths && !changeObjective4)
             {
+
                 secondObjective2();
                 changeObjective4 = true;
             }
@@ -87,18 +86,46 @@ public class objectiveManager : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "The_Final_Map")
         {
-
+            if (finalMapDoor == null)
+            {
+                getNeededFinalMap();
+            }
+            if (!buttons.A_Button && !buttons.B_Button && !buttons.C_Button)
+            {
+                finalObjective1();
+            }
+            if (buttons.A_Button && buttons.B_Button && buttons.C_Button && !changeObjective5)
+            {
+                finalObjective2();
+                changeObjective5 = true;
+            }
+            if (inBattle)
+            {
+                finalObjective3();
+            }
+            if (finalMapDeathCounterScript.deadEnemys == finalMapDeathCounterScript.needed_deaths)
+            {
+                inBattle = false;
+                finalObjective4();
+            }
         }
     }
     void getNeededFirstMap()
     {
-        Door = GameObject.Find("ovi");
-        door = Door.gameObject.GetComponent<canOpenDoor>();
+        ovi = GameObject.Find("ovi");
+        door = ovi.gameObject.GetComponent<canOpenDoor>();
     }
     void getNeededSecondMap()
     {
         secondMapDeathCounter = GameObject.Find("deathCounter");
         secondMapDeathCounterScript = secondMapDeathCounter.gameObject.GetComponent<deathcounter>();
+    }
+    void getNeededFinalMap()
+    {
+        finalMapDoor = GameObject.Find("door");
+        buttons = finalMapDoor.gameObject.GetComponent<buttoncheck>();
+        finalMapDeathCounter = GameObject.Find("deathCounter");
+        finalMapDeathCounterScript = finalMapDeathCounter.gameObject.GetComponent<deathcounter>();
     }
     // first = 1. level      second = 2.level ...
     void firstObjective2()
@@ -132,5 +159,9 @@ public class objectiveManager : MonoBehaviour
     void finalObjective3()
     {
         text.text = finalMapObjectives[2];
+    }
+    void finalObjective4()
+    {
+        text.text = firstMapObjectives[3];
     }
 }
