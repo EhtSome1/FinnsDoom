@@ -1,7 +1,7 @@
 Ammattikoulussa tehty 3d-peliprojekti.
 Projekti on tehty unityllä ja julkaistu valmistumisen jälkeen itch.io sivustolle ladattavaksi
 Projektiin on osallistuunut seuraavat henkilöt:
-Aapo Uusitalo
+Alpo Uusitalo
 Eero Oja
 Jonne Mourujärvi
 
